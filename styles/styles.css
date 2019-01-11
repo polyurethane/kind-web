@@ -1,0 +1,28 @@
+body{
+	margin: 10%;
+	background-color: #ffffcc;
+	font-size: 80px;
+}
+
+a {
+	color: red;
+	text-decoration: none;
+}
+
+a:hover{
+	color: black;
+}
+
+h1{
+	font-size: 1.5em;
+}
+
+p{
+	font-style: italic;
+	opacity: 0.5;
+}
+
+.name{
+	padding: 100px;
+	font-style: bold;
+}
