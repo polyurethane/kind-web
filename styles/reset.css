@@ -1,0 +1,12 @@
+:root { font: 30px/1.2 "Roboto", sans-serif; } /* or html */
+
+body,
+body * {
+	margin:          unset;
+	box-sizing:      unset;
+	padding:         unset;
+	font-size:       unset;
+	color:           red;
+	text-decoration: unset;
+} 
+/*reseting the color and font*/
