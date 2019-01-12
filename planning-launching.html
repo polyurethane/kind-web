@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> kay liang </title>
+		<style>
+		 body {
+		 	display: grid;
+		 	margin-top: 50px;
+		 	margin-left: 70px;
+		 	margin-right: 70px;
+		 	line-height: 1.3;
+		 	font-family: "verdana"
+		 }
+		 h2 {
+		 	font-size: 17px;
+		 }
+		 #links {
+		 	display: inline-block;
+		 }
+		</style>
+		<div id="links">
+			<a href="#planning">Planning</a>
+			<a href="#terminal">Terminal</a>
+			<a href="#command prompt">Command Prompt</a>
+			<a href="#launching">Launching</a>
+		</div>
+	</head>
+	<body>
+		<section id="planning">
+			<h1>planning a website</h1>
+			<p>sitemap &#8594 wireframe &#8594 mockup</p>
+			<p><b>sitemap:</b> organized list / flow chart diagram &#8594 shows hierarchy and structure of website</p>
+			<img src="images/planning-launching/sitemap.jpg" width="300">
+			<p><b>wireframe: </b>screen blueprint / visual guide &#8594 represents skeletal framework of website</p>
+			<ul>
+				<li>includes info / navigation / interface design</li>
+				<li>excludes graphic (color / type / image) design</li>
+			</ul>
+			<img src="images/planning-launching/wireframe.png" width="300">
+			<p><b>mockup: </b>prototype &#8594 tests functions and completely designed</p>
+			<ul><li>style / graphics / images / color palette</li></ul>
+			<img src="images/planning-launching/mockup.png" width="300">
+		</section>
+
+		<section id="terminal">
+			<h1>using the terminal</h1>
+			<ul>
+				<li><code>ls</code><p>list directories</p></li>
+				<li><code>cd [directory name]</code><p>change directories</p>
+					<ul>
+					<li><code>cd ..</code> <p>move up a directory</p></li>
+					<li><code>cd</code><p>return to home directory</p></li>
+					</ul>
+				</li>
+				<li><code>mkdir [directory name]</code><p>make a folder</p></li>
+				<li><code>touch [file name]</code><p>make a file</p></li>
+				<li><code>rm [file name]</code><p>remove a file</p></li>
+				<li><code>rm -r [directory name]</code><p>remove files recursively, remove entire directories with items</p></li>
+				<li><code>clear</code><p>clear terminal</p></li>
+				<li><b>ctrl + c</b><p>kill process</p></li>
+				<li><b>up arrow</b><p>use previous command</p></li>
+			</ul>
+		</section>
+		<section id="command prompt">
+			<h1>using the command prompt</h1>
+			<ul>
+				<li><code>dir</code><p>list directories</p></li>
+				<li><code>cd [directory name]</code><p>change directories</p>
+					<ul>
+					<li><code>cd ..</code> <p>move up a directory</p></li>
+					<li><code>cd</code><p>return to home directory</p></li>
+					</ul>
+				</li>
+				<li><code>mkdir [directory name]</code><p>make a folder</p></li>
+				<li><code>type nul > [file name]</code><p>make a file</p></li>
+				<li><code>del [file name]</code><p>remove a file</p></li>
+				<li><code>rmdir [directory name]</code><p>remove files recursively, remove entire directories with items</p></li>
+				<li><code>clear</code><p>clear terminal</p></li>
+				<li><b>ctrl + c</b><p>kill process</p></li>
+				<li><b>up arrow</b><p>use previous command</p></li>
+			</ul>
+		</section>
+
+		<section id="launching">
+			<h1>launching a website</h1>
+			<h2>Steps</h2>
+			<ol>
+				<li>Set up a local server (optional if 100% static HTML)</li>
+				<li>Develop your website locally (on Sublime, Brackets etc.)</li>
+				<li>Choose and set up your hosting service (Filezilla, Github etc.)</li>
+				<li>Upload local copy of your website <ul>
+					<li>via FTP (File Transfer Protocol)</li>
+					<li>via Github</li>
+				</ul></li>
+				<li>Test your live website</li>
+			</ol>
+
+			<h2>1. Set up a local server</h2>
+			<ol>
+			<li> Go into the folder for your website containing your (index.html, styles, scripts, images) etc in terminal (can also drag into terminal) </li>
+			<p><code>cd /Users/username/Desktop/banana-flower-site</code></p>
+			<li>Start a HTTP server on port 8000 using a built-in web server in Python</li>
+			<p><code>python -m SimpleHTTPServer 8000</code> (terminal)<p>
+			<p><code>py -m http.server</code> (command prompt)</p>
+
+			<li> See your website online on at <b>"localhost:8000"</b></li>
+			<li> To share you locally served website with your friends, get them to go on <b>"[your ip address]:8000"</b></li>
+			<li> To kill your server <b>ctrl + c</b></li>
+			</ol>
+			<h2>4. Upload local copy of your website (via Github)</h2>
+			<p>choose the directory you want to work in</p>
+			<code>cd Desktop</code>
+			<p>clone your repository to that directory</p>
+			<code>git clone [github repository url]</code>
+			<p>change directories into your cloned repository</p>
+			<code>cd [repository name]</code>
+			<p>add file to staging environment or index (tell git which files to commit)</p>
+			<code>git add .</code>
+			<p>commit files (record the changes you've made)</p>
+			<code>git commit -m "comment on the commit"</code>
+			<p>push files onto repository</p>
+			<code>git push</code>
+			<p>if not in current branch and you want to push to master branch</p>
+			<code>git push origin master</code>
+			<h2>if working on a shared repository</h2>
+			<p>make sure you pull files from shared repository before staging, committing and pushing</p>
+			<code>git pull</code>
+		</section>
+	</body>
+</html>
