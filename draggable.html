@@ -19,31 +19,38 @@
 
 <body>
 
-<div class="content-left">
   
   <div id="not-draggable">
   	<p>
-  	<br>
+    <br>
   	Making a <span style="text-decoration: underline;">draggable div</span> 
   	<br>
   	with 3 lines of jQuery!
   	<br>
-  	Drag the one below
+  	Drag the one below<br><br>
+    (If it doesn't work, <br> you might have to allow <br>"unsafe script" to run)
   	</p>
   </div>
 
+<br>
+
   <div id="draggable">
-  <p>
-  	<br><br><br>
+
+  <svg id="ellipse-contain" height="160" width="500">
+  <ellipse cx="159" cy="77" rx="158" ry="76"></ellipse>
+  </svg>
+
+  <p id="text-over">
   	<span id="magenta">$</span>(<span id="cyan">function</span>(){ 
   	<br>
     <span id="magents">$</span>(<span id="yellow">"#draggable"</span>).<span id="cyan">draggable</span>();
     <br>
   	});
   </p>
- </div>
 
-</div>
+  </div>
+
+
 
 </body>
 </html>
