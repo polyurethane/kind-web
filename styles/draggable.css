@@ -1,0 +1,58 @@
+body {
+  padding: 25px;
+}
+
+#draggable {
+  background: white;
+  outline: solid;
+  outline-color: red;
+  outline-width: 1.25pt;
+  width: 320px;
+  height: 155px;
+  line-height: 200px;
+  white-space: nowrap;
+  text-align: center;
+  cursor: move;
+  &:hover {
+    background: darken(orange, 5);
+  }
+}
+
+#not-draggable {
+  background: white;
+  outline: solid;
+  outline-color: red;
+  outline-width: 1.25pt;
+  width: 320px;
+  height: 90px;
+  line-height: 200px;
+  white-space: nowrap;
+  text-align: center;
+  cursor: move;
+  &:hover {
+    background: darken(orange, 5);
+  }
+}
+
+
+
+
+p{
+  color: black;
+  font-family: Andale Mono, sans-serif;
+  line-height: 14pt;
+  text-align: center;
+}
+
+#magenta{
+  color: magenta;
+}
+
+#cyan{
+  color: blue;
+}
+
+#yellow{
+  color: orange;
+}
+
