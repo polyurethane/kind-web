@@ -1,0 +1,37 @@
+body{
+	margin: -3%;
+	background-color: red;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+body:hover{
+	background-color: yellow;
+}
+
+
+#img {
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+}
+
+/*#top-right{
+	text-orientation: vertical;
+	position: absolute;
+	z-index: 1000;
+	font-size: 12pt;
+	color: white;
+	right: 99vw;
+	top:0vh;
+}
+
+#low-left{
+	position: absolute;
+	z-index: 1000;
+	font-size: 12pt;
+	color: white;
+	left: 0vw;
+	top:99vh;
+}
+*/
