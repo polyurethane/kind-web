@@ -1,15 +1,7 @@
-
-
-@font-face {
-  font-family: 'ArialNarrow';
-  src: url('Arial Narrow.eot');
-  src: url('Arial Narrow.eot?#iefix') format('embedded-opentype');
-  src: url('ArialNarrow.woff') format('woff');
-  src: url('ArialNarrow.svg#ArialNarrow') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@font-face{
+font-family: myFont;
+src: url('styles/terminal-grotesque.ttf');
 }
-
 
 body {
   background-color: white;
@@ -19,7 +11,7 @@ body {
 
 p {
  /* font-family: 'Lora', serif;*/
-  font-family: 'ArialNarrow', Arial, sans-Serif;        /*If our typeface doesn't load, our "fallback" is Tahoma */
+  font-family: 'myFont', Arial, sans-serif;        /*If our typeface doesn't load, our "fallback" is Tahoma */
   font-size: 1.5em; /* 1em = 12pt = 16px = 100%. So 0.5em = 6pt... And 1.5em = 18pt */
   font-weight: normal;
   line-height: 1.25em; /* so 1.25em = 15pt */
