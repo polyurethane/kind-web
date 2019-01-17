@@ -1,5 +1,5 @@
 
-/*@font-face {
+@font-face {
   font-family: 'Akkurat';
   src: url('assets/fonts/Akkurat.eot');
   src: url('assets/fonts/Akkurat.ttf')  format('truetype'),
@@ -9,9 +9,9 @@
        url('assets/fonts/Akkurat.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
-}*/
+}
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans');*/
 
 body {
   background-color: white;
