@@ -1,0 +1,33 @@
+<html>
+<head>
+	<style>
+		.steve {
+			content:url("steve.png");
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+</body>
+<script>
+	// throwing it directly onto dom without storing it
+	for (var i = 0; i<10; i++){
+		document.body.appendChild(document.createElement("img")).src = "man.png"
+	}
+
+	// setting attributes on javascript
+	for (var i = 0; i<20; i++){
+		var bot = document.createElement("img");
+		bot.setAttribute('src', "ardfin-bot.gif");
+		bot.setAttribute('style', "padding:10px");
+		document.body.appendChild(bot);
+	}
+
+	// setting attributes on css
+	for (var i = 0; i<5; i++){
+		var steve = document.createElement("img");
+		steve.setAttribute('class', "steve");
+		document.body.appendChild(steve);
+	}
+</script>
+</html>
