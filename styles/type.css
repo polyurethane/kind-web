@@ -16,12 +16,11 @@
 body {
   background-color: white;
   padding: 1em;
-  margin-bottom: 
 }
 
 p {
-  font-family: 'Akkurat';
   /*font-family: 'Roboto Condensed', sans-serif;*/
+  font-family: 'Akkurat', Tahoma, Sans-Serif;       /* If our typeface doesn't load, our "fallback" is Tahoma */
   font-size: 1.5em; /* 1em = 12pt = 16px = 100%. So 0.5em = 6pt... And 1.5em = 18pt */
   font-weight: normal;
   line-height: 1.25em; /* so 1.25em = 15pt */
