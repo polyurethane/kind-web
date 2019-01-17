@@ -1,6 +1,6 @@
 @font-face{
 font-family: myFont;
-src: url('terminal-grotesque.ttf');
+src: url('../assest/fonts/terminal-grotesque.ttf');
 }
 
 body {
