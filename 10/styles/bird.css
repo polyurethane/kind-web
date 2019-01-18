@@ -1,0 +1,28 @@
+html{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#draggable {
+  background: none;
+  width: 320px;
+  height: 155px;
+  line-height: 200px;
+  text-align: center;
+  cursor: move;
+  z-index: 100;
+}
+
+#not-draggable {
+  cursor: default;
+}
+
+p{
+  z-index: 10000;
+  color: black;
+  font-family: Andale Mono, sans-serif;
+  line-height: 14pt;
+  text-align: center;
+}
+
+

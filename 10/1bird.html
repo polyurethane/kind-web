@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>1 bird</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0">
+  <link rel="icon" href="images/bird.ico" type="image/x-icon"> <!-- img must be min 32x32px + renamed: .ico -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script type="text/javascript" src="script/draggable.js"></script>
+
+
+<script type="text/javascript">
+</script>
+
+<style>
+
+html{
+  background-color: #f1f3f4;
+  padding: 30px;
+}
+
+body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #f1f3f4 ;
+}
+
+.scroll-left {
+ height: 50px;  
+ overflow: hidden;
+ position: relative;
+ background: yellow;
+ color: orange;
+ border: 1px solid black;
+}
+
+.scroll-left p { /* text inside the box */
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ -moz-transform:translateX(100%); /* 0 */
+ -webkit-transform:translateX(100%);  
+ transform:translateX(100%);
+ -moz-animation: scroll-left 13s linear infinite; /* time */
+ -webkit-animation: scroll-left 13s linear infinite;
+ animation: scroll-left 13s linear infinite;
+ font-family: Apple Chancery, serif;
+ font-size: 1.5em;
+ color: black;
+}
+
+@-moz-keyframes scroll-left { /* ANIMATION FOR ABOVE */
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); 
+ -webkit-transform: translateX(100%); 
+ transform: translateX(100%);     
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); 
+ -webkit-transform: translateX(-100%); 
+ transform: translateX(-100%); 
+ }
+}
+
+#content{
+  margin:1em;
+}
+
+.column{
+  float: left;
+  width: 50%;
+}
+
+.row{
+  clear: both;
+  display: table;
+}
+
+audio
+{
+position: absolute;
+top: 50px;
+right: 50px;
+-moz-border-radius:9px 9px 9px 9px ;
+-webkit-border-radius:9px 9px 9px 9px ;
+border-radius:9px 9px 9px 9px ;
+background-color: #f1f3f4;
+border-style: solid;
+border-color: black;
+border-width: 1pt;
+}
+
+#play{
+cursor: pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="content">
+<div class="row">
+  
+  <div class="column">
+    <div id="bel-oiseau">
+      <img src="images/jouets.png" style="width:60vw; height:80vh;">    
+    </div>
+  </div>
+
+  <div class="column">
+    
+    <div>
+      
+      <img id="play" src="images/play.png" style="width:35vw; height:80vh; padding-left:50px" onclick="location.href='2bird.html';">    
+
+      <audio controls>
+      <source src="oiseau.mp3" type="audio/mpeg">
+      </audio>
+
+    </div>
+
+  </div>
+
+  <div class="scroll-left"> <p>
+   <!--  <span id="fr">Je connais les brumes claires</span> — <span id="en">I know the light mists</span> / <span id="fr">la neige blanche et les matins d'hivers</span> — <span id="en"> the pink snow of winter mornings </span> / <span id="fr">je voudrais te retrouver</span> — <span id="en">I could find you</span> / <span id="fr">le lièvre blanc qu'on ne voit jamais</span> — <span id="en">the white hare that we never see</span> / <span id="fr">mais l'oiseau l'oiseau s'est envolé</span> — <span id="en">but the bird, the bird who flew away</span> / <span id="fr">et moi jamais je ne le retrouverai</span> — <span id="en">and I will never see it again</span> / <span id="fr">car j'ai vu, j'ai vu l'oiseau</span> — <span id="en">because I saw, I saw the bird</span> / <span id="fr">j'ai vu l'oiseau je sais qu'il partait</span> — <span id="en">I saw the bird, I know it has gone away</span> / <span id="fr">je l'ai entendu pleurer</span> — <span id="en">I heard it cry</span> / <span id="fr">le bel oiseau que le vent chassait</span> — <span id="en">the beautiful bird that the wind chased</span> / <span id="fr">je voudrais tout te donner</span> — <span id="en">I would like to give you everything</span> / <span id="fr">mais toi pourquoi ne me dis tu rien</span> — <span id="en">but why do you say nothing to me</span> / <span id="fr">quel est il ton grand secret</span> — <span id="en">what is your big secret</span> / <span id="fr">un secret d'homme</span> — <span id="en">a man's secret</span> / <span id="fr">je le comprend bien</span> — <span id="en">I understand it well</span> / <span id="fr">mais tu sais je peux te raconter</span> — <span id="en">but you know I can tell you</span> / <span id="fr">combien l'oiseau est parti à</span> — <span id="en">how many birds left with regrets</span> / <span id="fr">si un jour tu m'écoutais</span> — <span id="en">if one day you listened to me</span> / <span id="fr">tu apprendrais tout ce que je sais</span> — <span id="en">you would learn all I know</span> / <span id="fr">l'oiseau part et puis revient</span> — <span id="en">the bird leaves then it comes back</span> / <span id="fr">tu le verras peut etre demain</span> — <span id="en">you might see it tomorrow</span> /  --> <span id="fr">C'est l'oiseau que tu aimais</span> — <span id="en">This is the bird you loved<!-- </span> / <span id="fr">L'oiseau jaloux je l'ai deviné</span> — <span id="en">The jealous bird, I guessed it</span> / <span id="fr">s''il revient de son voyage</span> — <span id="en">if it ever came back</span> / <span id="fr">je lui dirais que tu l'attendais</span> — <span id="en">I would tell it that you've been waiting for it</span>  -->
+  </p> </div>
+  
+</div>
+</div>
+
+
+</body>
+
+
+
+ <script>
+     var aAudio = new Audio('a.mp3');
+     var bAudio = new Audio('b.mp3');
+     function myAudioFunction(letter) {
+         if(letter == 'a') {
+             aAudio.play();
+         } else if(letter == 'b') {
+             bAudio.play();
+         }
+     }
+ </script>
+
+
+</html>
+
+
+
+
+
