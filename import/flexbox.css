@@ -1,0 +1,96 @@
+html{
+  background-color: red; 
+  font-family: Helvetica, sans-serif;
+  color: white;
+}
+h2{
+position: absolute;
+left:25px;
+}
+
+.container-1 {
+  background-color: yellow;
+  display: flex; /* or inline-flex */
+  /* or flex-flow: row nowrap;*/
+  flex-direction: row; /* or row-reverse | column | column-reverse */
+  flex-wrap: wrap; /* or no-wrap | wrap-reverse */
+  justify-content: space-around; /* or flex-start | flex-end | center | space-between | space-around | space-evenly */
+  align-items: flex-start; /* or flex-end | center | baseline | stretch */
+  align-content: flex-start; /* or flex-end | center | space-between | space-around | stretch */
+}
+
+
+/* 
+
+FLEX-DIRECTION
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top 
+
+FLEX-WRAP
+nowrap (default): all flex items will be on one line
+wrap: flex items will wrap onto multiple lines, from top to bottom.
+wrap-reverse: flex items will wrap onto multiple lines from bottom to top.
+
+ALIGN-ITEMS
+flex-start: cross-start margin edge of the items is placed on the cross-start line
+flex-end: cross-end margin edge of the items is placed on the cross-end line
+center: items are centered in the cross-axis
+baseline: items are aligned such as their baselines align
+stretch (default): stretch to fill the container (still respect min-width/max-width)
+
+ALIGN-CONTENT
+flex-start: lines packed to the start of the container
+flex-end: lines packed to the end of the container
+center: lines packed to the center of the container
+space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
+space-around: lines evenly distributed with equal space around each line
+stretch (default): lines stretch to take up the remaining space
+
+*/
+
+
+.container-2 {
+  background-color: orange;
+  display: inline-flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  align-items: stretch;
+  align-content: center;
+}
+
+.item-1{
+  background-color: red;
+  padding:3em;
+  margin:0.5em;
+  order: 0; /* default is 0 */
+  flex-grow: 1; /* default 0 */
+}
+
+.item-2{
+  background-color: red;
+  padding:3em;
+  margin:0.5em;
+  order: 0; /* default is 0 */
+  flex-grow: 0; /* default 0 */
+}
+
+
+.parent {
+  background-color: blue;
+  display: flex;
+  height: 300px; /* For example */
+}
+
+.child {
+  background-color: cyan;
+  width: 100px;  
+  height: 100px; 
+  margin: auto;  /* Setting a vertical margin of auto = item perfectly centered! */
+}
+
+
+
+
