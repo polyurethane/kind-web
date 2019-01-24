@@ -1,10 +1,10 @@
-@font-face{
+	@font-face{
 		font-family: "FlavoredCrayons";
-		src: url('styles/fonts/FlavoredCrayons.ttf');
+		src: url('fonts/FlavoredCrayons.ttf');
 	}
 	@font-face{
 		font-family: "DK Crayonista";
-		src: url('styles/fonts/DKCrayonista.ttf');
+		src: url('fonts/DKCrayonista.ttf');
 	}
 	.title{
 		font-family: "FlavoredCrayons";
@@ -23,7 +23,7 @@
 		top: 100px;
 	}
 	.tutorials ul {
-		list-style-image: url('images/pencilbullet.png');
+		list-style-image: url('../images/pencilbullet.png');
 	}
 	.tutorials li{
 		padding: 25px;
