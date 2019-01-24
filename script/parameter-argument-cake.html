@@ -1,0 +1,18 @@
+<html>
+<script>
+//what is a parameter vs. argument
+
+var taylorWannabe = new Taylor("lemon", "poppy", "seed");
+taylorWannabe.bake();
+
+var kay = new Taylor("pumpkin", "cheese", "sugar");
+kay.bake();
+
+function Taylor(ingredient1, ingredient2, ingredient3){
+	this.bake = function(){
+		document.write(ingredient1 + ingredient2 + ingredient3 + " cake");
+	}
+}
+
+</script>
+</html>

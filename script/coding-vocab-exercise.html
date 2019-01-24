@@ -1,0 +1,31 @@
+<html>
+<script>
+	var globalArray = []; //declaring a global variable
+	var myObject = new MyObject(globalArray); //instantiate an object and feed it the global variable
+	
+	myObject.runMethod(); //call one of its methods (a function inside an object)
+	myObject.runMeAsWell();
+	myObject.write();
+
+	function MyObject(parameter){
+		var localArray = parameter; // store received argument as local variable
+		//local Array is an empty array
+
+		this.name = "hi";
+		this.age = 3;
+		this.runMethod = function(){
+			document.write(this.name);
+		}
+		this.runMeAsWell = function(){
+			document.write(this.age);
+		}
+		for (var i=0; i<4; i++){
+			localArray[i] = i + this.name;
+		}
+		this.write = function(){
+			document.write(localArray); //write the array on the document 
+		}
+	}
+
+</script>
+</html>

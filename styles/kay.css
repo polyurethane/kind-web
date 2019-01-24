@@ -1,0 +1,52 @@
+/*
+	@font-face{
+		font-family: "FlavoredCrayons";
+		src: url('fonts/FlavoredCrayons.ttf');
+	}
+	@font-face{
+		font-family: "DK Crayonista";
+		src: url('fonts/DKCrayonista.ttf');
+	}
+*/
+	.title{
+/*		font-family: "FlavoredCrayons", Arial, sans-serif;*/
+		font-size: 70px;
+		color: #4D4A42;
+		position: absolute;
+		padding: 30px;
+		top: -54px;
+	}
+	.tutorials {
+/*		font-family: "DK Crayonista", Arial, sans-serif;*/
+		font-size: 70px;
+		position: relative;
+		margin-left: 70px;
+		margin-right: 15px;
+		top: 100px;
+	}
+	.tutorials ul {
+		list-style-image: url('../images/pencilbullet.png');
+	}
+	.tutorials li{
+		padding: 25px;
+	}
+	a:link{
+		color: LightSkyBlue;
+		text-decoration: none;
+
+	}
+	a:visited{
+		color: LightSkyBlue;
+		text-decoration: none;
+	}
+	a:hover{
+		color: salmon;
+	}
+	@media (max-width: 8.5in){
+		.tutorials {
+			font-size: 40px;
+			position: relative;
+			margin-left: 20px;
+			top: 100px;
+		}
+	}

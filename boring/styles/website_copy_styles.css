@@ -1,0 +1,166 @@
+:root { font: 20px/1.2 "Roboto", sans-serif; }
+
+body,
+body * {
+  background:      unset;
+  outline:    0.0rem solid hsla(1000, 0%, 0%, 1) ;
+  margin:          unset;
+  box-sizing:      unset;
+  padding:         unset;
+  color:           unset;
+  text-decoration: unset;
+}
+
+div {
+  display: block;
+}
+
+.container {
+	max-width: 1200px;
+  margin: 10px auto;
+  padding: 75px;
+}
+
+
+header {
+	padding: 0px;
+
+}
+
+
+header > div
+
+.logo {
+  display: inline-block;
+	height: 99px;
+  margin-left: 0px;
+  float: left;
+}
+
+.rightnav {
+   /* clear: both;*/
+    font-family: "Helvetica Neue", "Arial", "sans-serif";
+    font-size: 13px;
+    line-height: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-style: normal;
+
+    display: inline-flex;
+    margin-left: auto;
+    /*display: flex;*/
+
+}
+
+.navbar {
+
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+  margin: 20px;
+  margin-top: 80px;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  width: 100px;
+}
+
+li a:hover {
+  color: #f0523d;
+  cursor: pointer;
+  }
+
+/*.debug-center {
+    justify-content: center;
+    align-items:     center;
+}*/
+
+
+.mobile_menu {
+  position: relative;
+  display: none;
+}
+
+.dropbtn {
+  padding: 16px;
+
+  font-size: 15px;
+  border: none;
+
+}
+
+.menu-content {
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+
+
+.artwork {
+  display: block;
+  margin: 20px;
+  width: 350px;
+  height: 350px;
+ overflow:hidden;
+ object-fit: cover;
+}
+
+.art_container {
+  float: left;
+
+}
+
+div > .art_img {
+  
+}
+
+main {
+  display: block;
+  font-family: "Times New Roman","Times","serif";
+  font-size:       15px;
+  line-height:     1.8em;
+}
+#page {
+  padding: 50px 0;
+  opacity: 1;
+  position: relative;
+}
+
+.art_title {
+    display: block !important; 
+    font-family: "Times New Roman","Times","serif";
+    font-size: 15px;
+    line-height: 1.8em;
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center !important;
+}
+
+
+@media only screen and (max-width: 750px) {
+.logo {
+    float: none !important;
+    text-align: center;
+    letter-spacing: 0 !important;
+    height: 50px;
+    margin: 0;
+}
+
+  .rightnav {
+    display: none;
+  }
+
+  .mobile_menu {
+    display: block;
+    margin: 0 0 25px;
+    text-align: center;
+  }
+}
+
