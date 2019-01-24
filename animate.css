@@ -11,6 +11,7 @@ Getting started:
 */
 
 @keyframes primary {
+  
   0% {
     background-color: red; /* position zero (or origin keyframe) is set to red */
   }
@@ -23,7 +24,7 @@ Getting started:
 }
 
 html {
-  animation: primary 5s infinite alternate ; /* Here, we want out html element to vary in color in 5s, forever, and back again */
+  animation: primary 5s infinite alternate; /* Here, we want out html element to vary in color in 5s, forever, and back again */
 }											/* The name of our animation is "rainbow", instantiated above */
 
 
@@ -59,7 +60,7 @@ html {
 }
 
 
-#example-1 {
+/*#example-1 {
   z-index: 100;
   position: fixed;
   animation-name: W;
@@ -71,7 +72,7 @@ html {
   animation-fill-mode: none;
   animation-play-state: running; 
 }
-
+*/
 
 /* NEW EXAMPLE EVEN */
 
@@ -112,18 +113,16 @@ html {
 /* or... */
 
 
-/*
-
 #example-1 {
     animation: 
     W 2s ease-out 0s alternate infinite none running,
-    primary 10s linear infinite alternate;
+    primary 5s linear infinite alternate;
 }
-
+/*
 This is useful for when you want two animations at once! Sepearte by comma.
 
-*/
 
+*/
 
 
 

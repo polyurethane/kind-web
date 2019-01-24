@@ -1,6 +1,6 @@
 body{
 	background-color: white;
-	overflow-x: hidden;
+	overflow-x: scroll;
 	overflow-y: hidden;
 }
 
@@ -9,20 +9,25 @@ body{
 	margin: -3%;
 	width: 105vw;
 	height: 105vh;
-	z-index: 0;
+	z-index: -1;
+	position: fixed;
 }
 
-p{
+.text{
+	position: absolute;
 	z-index: 1000;
 	padding-left: 5%;
 	padding-right: 5%;
+}
+
+
+p{	
 	color: yellow;
 	font-size: 24pt;
-	position: absolute;
 	left: 10px;
 	top: 5px;
 	font-weight: italic;
-	font-family: 
+	font-family: Helvetica, sans-serif;
 
 }
 
