@@ -1,15 +1,15 @@
-/*
 	@font-face{
 		font-family: "FlavoredCrayons";
 		src: url('fonts/FlavoredCrayons.ttf');
 	}
+
 	@font-face{
 		font-family: "DK Crayonista";
 		src: url('fonts/DKCrayonista.ttf');
 	}
-*/
+
 	.title{
-/*		font-family: "FlavoredCrayons", Arial, sans-serif;*/
+		font-family: "FlavoredCrayons", sans-serif;
 		font-size: 70px;
 		color: #4D4A42;
 		position: absolute;
@@ -17,7 +17,7 @@
 		top: -54px;
 	}
 	.tutorials {
-/*		font-family: "DK Crayonista", Arial, sans-serif;*/
+		font-family: "DK Crayonista", sans-serif;
 		font-size: 70px;
 		position: relative;
 		margin-left: 70px;
