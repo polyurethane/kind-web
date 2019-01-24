@@ -1,0 +1,107 @@
+<!-- <!DOCTYPE html>  --> <!-- had to remove this in order for sticky tow work -->
+<html>
+<head>
+<style>
+	div {
+		font-family: sans-serif;
+		border: 2px solid #000000;
+		text-align: center;
+		margin: 14px;
+		overflow: visible;
+	}
+	div p {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	div.static {
+		position: static;
+		left: 40px; /* no position properties will work on a static element */
+	}
+	div.relative {
+		position: relative;
+		left: 40px;
+	}
+	div.fixed {
+		position: fixed;
+		top: 350px;
+	}
+	div.absolute-child {
+		position: absolute;
+		overflow: auto;
+		top: 1px; /* position 5px relative to positioneed div class="relative" */
+		width: 20%;
+		height: 80%;
+		font-size: 12px;
+	}
+	div.absolute-orphan {
+		position: absolute;
+		overflow: auto;
+		top: 800px; /* position 5px relative to positioneed div class="relative" */
+		right: 10px;
+		width: 30%;
+		height: 20%;
+		font-size: 12px;
+	}
+	div.sticky {
+		position: sticky;
+		top: 70;
+	}
+
+	div.front {
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		top: 780px;
+	}
+
+	div.behind{
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background-color: green;
+		top: 800px;
+		left: 20px;
+		z-index: -1;
+	}
+</style>
+</head>
+<body>
+	<div class="static">
+		<h2>static</h2>
+		<p>not positioned in anyway; positioned according to normal flow of page</p>
+	</div>
+
+	<div class="relative">
+		<h2>relative</h2>
+		<p>positioned relative to its normal position</p>
+
+		<div class="absolute-child">
+			<h2>absolute</h2>
+			<p>positioned relative to the nearest positioned parent instead of viewport</p>
+		</div>
+	</div>
+
+	<div class="fixed">
+		<h2>fixed</h2>
+		<p>positioned relative to the viewport; always in the same place even if the page is scrolled</p>
+	</div>
+
+	<div class="absolute-orphan">
+			<h2>absolute</h2>
+			<p>if not a child of positioned parent, uses document body and moves along with page scrollings</p>
+	</div>
+
+	<div class="sticky">
+		<h2>sticky</h2>
+		<p>positioned based on user's scroll position; is relative until a given offset position is met in the viewport - then "sticks" in place like fixed element</p>
+	</div>
+
+	<div class="front">
+	</div>
+
+	<div class="behind">
+	</div>
+	
+</body>
+</html>
