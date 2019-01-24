@@ -1,0 +1,176 @@
+/* 
+
+Hello! Here is a file to keep, about CSS Animations!
+
+Getting started: 
+
+	1. Each animation needs to be defined with a "@keyframes"
+
+	2. They are called within their css class/id/element with "animation: ... ;"
+
+*/
+
+@keyframes primary {
+  0% {
+    background-color: red; /* position zero (or origin keyframe) is set to red */
+  }
+  50% {
+    background-color: yellow; /* it then transitions to yellow */
+  }
+  100% {
+    background-color: blue; /* and finally to blue at 100%. It then starts over because we put "infinite" */
+  }
+}
+
+html {
+  animation: primary 5s infinite alternate ; /* Here, we want out html element to vary in color in 5s, forever, and back again */
+}											/* The name of our animation is "rainbow", instantiated above */
+
+
+/* NEW EXAMPLE */
+
+@keyframes W {
+  /* Let's make the ball zig-zag! */
+  
+  0% {
+    margin-left:0%; 
+    margin-top:0%;
+  }
+  
+  25% {
+    margin-left:20%; 
+    margin-top:50%;
+  }
+
+  50% {
+    margin-left:40%; 
+    margin-top:0%;
+  }
+
+  75% {
+    margin-left:60%; 
+    margin-top:50%;
+  }
+
+  100% {
+    margin-left:80%; 
+    margin-top:0%;
+  }
+}
+
+
+#example-1 {
+  z-index: 100;
+  position: fixed;
+  animation-name: W;
+  animation-duration: 2s; 
+  animation-timing-function: ease-in-out; 
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running; 
+}
+
+
+/* NEW EXAMPLE EVEN */
+
+
+#example-2 {
+  z-index: 1;
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  left:100px;
+  top:100px;
+  background-color: violet;
+  animation-name: change;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes change {
+  0% {
+    transform: scale(.3);
+    background-color: violet;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: yellow;
+  }
+}
+
+/* or... */
+
+
+/*
+
+#example-1 {
+    animation: 
+    W 2s ease-out 0s alternate infinite none running,
+    primary 10s linear infinite alternate;
+}
+
+This is useful for when you want two animations at once! Sepearte by comma.
+
+*/
+
+
+
+
+
+
+
+/*GLOSSARY*/
+
+/*Sub-properties of "animation:" are:
+
+	- animation-name: declares name of your keyframe animation
+
+	- animation-duration: the length of time taken for animation to complete one cycle. (a number + time unit)
+
+	- animation-timing-function: ease/ease-out/ease-in/ease-in-out/linear/cubic-bezier(x1, y1, x2, y2). 
+	Establishes acceleration curves;
+		linear: The animation has the same speed from start to end	
+		ease: Default value. The animation has a slow start, then fast, before it ends slowly	
+		ease-in: The animation has a slow start	
+		ease-out: The animation has a slow end	
+		ease-in-out: The animation has both a slow start and a slow end	
+		step-start:	Equivalent to steps(1, start)	
+		step-end: Equivalent to steps(1, end)	
+		steps(int,start|end): Specifies a stepping function, with two parameters. The first parameter specifies the number of intervals in the function. It must be a positive integer (greater than 0). The second parameter, which is optional, is either the value "start" or "end", and specifies the point at which the change of values occur within the interval. If the second parameter is omitted, it is given the value "end"	
+		cubic-bezier(n,n,n,n): Define your own values in the cubic-bezier function. Values from 0–1. Eg: cubic-bezier(0.5, 0.2, 0.3, 1.0)
+	
+	- animation-delay: Xs/Xms . The time between the element being loaded and the start of the animation sequence.
+	
+	- animation-direction: normal/alternate . The direction of the animation after the cycle. Its default resets on each cycle.
+	
+	- animation-iteration-count: X . The number of times the animation should be performed.
+	
+	- animation-fill-mode: forwards/backwards/both/nonesets . Sets which values are applied before/after the animation. For example, you can set the last state of the animation to remain on screen, or you can set it to switch back to before when the animation began.
+	
+	- animation-play-state: paused/running . Pause or play the animation.
+
+*/
+
+img{
+	display:block;
+    margin-top:22%;
+    margin-left:20%;
+}
+
+
+
+
+
+
+
