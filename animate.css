@@ -60,7 +60,7 @@ html {
 }
 
 
-/*#example-1 {
+#example-1 {
   z-index: 100;
   position: fixed;
   animation-name: W;
@@ -72,7 +72,7 @@ html {
   animation-fill-mode: none;
   animation-play-state: running; 
 }
-*/
+
 
 /* NEW EXAMPLE EVEN */
 
@@ -112,12 +112,14 @@ html {
 
 /* or... */
 
+/*
 
 #example-1 {
     animation: 
     W 2s ease-out 0s alternate infinite none running,
     primary 5s linear infinite alternate;
-}
+}*/
+
 /*
 This is useful for when you want two animations at once! Sepearte by comma.
 
