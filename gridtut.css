@@ -1,0 +1,178 @@
+html{
+  /*background-color: #D0E40F; */
+  font-family: Helvetica, sans-serif;
+  color: #94FF08;
+  font-weight: bold;
+  box-sizing:border-box;
+  font-size: 80%;
+  background-image: url("images/kindo.png");
+   background-size: cover;
+
+}
+a{
+    color: #94FF08;
+    text-decoration: none;
+     font-weight:bold;
+}
+a:hover
+{
+    font-style: italic;
+}
+
+nv{
+ font-family: Helvetica, sans-serif;
+  color: #AAA084; 
+  cursor:zoom-in;
+}
+
+.container{
+    display:grid;
+  grid-template-columns: 30%,70%;
+padding:5em;
+margin:0.3em;
+}
+.navcontainer{
+  grid-column:1;
+  display:grid;
+  align-content: space-between;
+  grid-template-columns:1fr;
+  grid-template-rows: repeat(5,1fr);
+padding:1em;
+margin:0;
+
+}
+.gridcontainer{
+    outline:  1px  white dashed;
+  grid-column:2;
+  display:grid;
+  align-content: space-between;
+  grid-template-columns: repeat(5,minmax(0, 1fr));
+  grid-template-rows: repeat(5,minmax(0, 1fr));
+padding:1em;
+margin:0;
+  cursor:help;
+
+}
+
+.start{
+padding:2em;
+margin:0.3em;
+justify-self:start;
+align-self:start;
+
+}
+
+.end{
+padding:2em;
+margin:0.3em;
+justify-self:end;
+align-self:end;
+}
+
+.center{
+padding:2em;
+margin:0.3em;
+justify-self:center;
+align-self:center;
+}
+
+.stretch{
+padding:2em;
+margin:0.3em;
+justify-self:stretch;
+align-self:stretch;
+}
+
+
+.gempic{
+  overflow:hidden;
+  width:2em;
+}
+
+
+@media (max-width:653px){
+.container{
+  padding:0em;
+margin:0em;
+}
+
+.navcontainer{
+  visibility: hidden;
+height:1px;
+padding:0em;
+}
+.gridcontainer{
+
+grid-column:1;
+padding:0em;
+grid-template-columns: repeat(5,minmax(0, 1fr));
+grid-template-rows: repeat(5,minmax(0, 1fr));
+}
+.start{
+padding:1em;
+margin:0.1em;
+justify-self:center;
+align-self:center;
+
+}
+
+.end{
+padding:1em;
+margin:0.1em;
+justify-self:center;
+align-self:center;
+}
+
+.center{
+padding:1em;
+margin:0.1em;
+justify-self:center;
+align-self:center;
+}
+
+.stretch{
+padding:1em;
+margin:0.1em;
+justify-self:center;
+align-self:center;
+}
+}
+
+/*#bigger{
+  grid-column: 4/span 2;
+  grid-row:2/span 4;
+}*/
+
+
+/* A SMALL GLOSSARY OF TERMS: 
+
+FLEX-DIRECTION
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top 
+
+FLEX-WRAP
+nowrap (default): all flex items will be on one line
+wrap: flex items will wrap onto multiple lines, from top to bottom.
+wrap-reverse: flex items will wrap onto multiple lines from bottom to top.
+
+ALIGN-ITEMS
+flex-start: cross-start margin edge of the items is placed on the cross-start line
+flex-end: cross-end margin edge of the items is placed on the cross-end line
+center: items are centered in the cross-axis
+baseline: items are aligned such as their baselines align
+stretch (default): stretch to fill the container (still respect min-width/max-width)
+
+ALIGN-CONTENT
+flex-start: lines packed to the start of the container
+flex-end: lines packed to the end of the container
+center: lines packed to the center of the container
+space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
+space-around: lines evenly distributed with equal space around each line
+stretch (default): lines stretch to take up the remaining space
+
+*/
+
+
+
