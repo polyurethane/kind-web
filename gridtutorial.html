@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">              
+
+
+<style>
+
+body * {
+  outline-color:white;
+  outline: solid 1px;
+  margin:          unset;
+  box-sizing:      unset;
+  padding:         0;
+  font-size:       unset;
+  color:           white;
+  text-decoration: unset;
+  font-color:white;
+}
+:root { font: 50dpx/1.2 "Arial", sans-serif; 
+  background:#A15436;
+
+} /* or html */
+
+/*UTILITY CLASS---USED TO CENTER CONTENT*/
+/*uses flexbox to justify and align flexibly&responsively*/
+.content-center {
+  display:         flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:     center;
+}
+
+/*UTILITY CLASS---USED TO INSTANTIATE A GRID FOR YOUR SHIT TO GO IN*/
+/*display grid as opposed to inline,block,contents,flex,table*/
+/*template columns specify 12 equally spaced columns*/
+/*template rows specify 3 columns, the middle one set as 300px*/
+/*minimum height as 100% viewport height */
+.container {
+    outline-color:white;
+  outline: dotted 1px;
+    display: grid;    
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:1fr 300px 1fr;
+    min-height: 100vh;
+}
+
+/*how many columns in the grid will your things take up&span?*/
+face {
+    grid-column: span 12;
+}
+arm {
+    grid-column: span 1;
+}
+tummy {
+    grid-column: span 10;    
+}
+foot {
+    grid-column: span 12;
+}
+</style>
+
+
+  </head>
+  
+  
+  
+    <body>
+
+<!-- MAKE A BIG CONTAINER DIV -->
+<div class="container">
+
+<!-- make your elements, 
+use your content centering utility class
+  write a lil somethin fun inside -->
+  <face class=content-center>
+    grids can be automatically filled from left to right or items can be placed individually
+    <br> 
+    this grid is 3 x 12
+    <br>
+    .container {
+    display: grid;    
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:1fr 300px 1fr;
+    min-height: 100vh;
+}
+    <br>
+
+    <br>
+    <br>
+    <b>face</b>{grid-column: span 12;}
+  <arm> </arm>
+  </face>
+  
+  <arm class=content-center>
+<b>arm</b>{grid-column: span 1;}
+  </arm>
+
+  <tummy class=content-center>
+
+<b>tummy</b>{grid-column: span 10;}
+  </tummy>
+
+  <arm class=content-center>
+<b>arm</b>{
+    grid-column: span 1;
+}
+  </arm>
+
+  <foot class=content-center>
+<b>foot</b>{
+    grid-column: span 12;
+}
+  </foot>
+  
+</div>
+
+
+
+    </body>
+
+
+</html>
