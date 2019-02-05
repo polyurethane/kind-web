@@ -1,0 +1,420 @@
+<html> 
+
+<head>
+	<meta charset="utf-8">
+	<title>Final</title>
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<style type="text/css">
+
+html{
+background-color: #f1f3f4 ;
+font-family: Helvetica, sans-serif;
+box-sizing:border-box;
+overflow: hidden;
+}
+
+svg{
+margin-left:-9px;
+margin-top:-16px;
+position: absolute;
+z-index:-1;
+}
+
+.container-1 {
+  overflow-y: scroll;
+  height: auto;
+  margin:1em;
+  display: flex; /* or inline-flex */
+  /* or flex-flow: row nowrap;*/
+  flex-direction: row; /* or row-reverse | column | column-reverse */
+  flex-wrap: wrap; /* or no-wrap | wrap-reverse */
+  justify-content: space-around; /* or flex-start | flex-end | center | space-between | space-around | space-evenly */
+  align-items: flex-start; /* or flex-end | center | baseline | stretch */
+  align-content: flex-start; /* or flex-end | center | space-between | space-around | stretch */
+}
+
+
+.item-1{
+  width:15em;
+  height:auto;
+  margin:0.5em;
+  order: 0; /* default is 0 */
+  flex-grow: 1; /* default 0 */
+  overflow: hidden;
+}
+
+.pic{
+  display: block;
+  object-fit: contain;
+}
+
+img{
+ width: 100%;
+ height: auto;
+ visibility: visible;
+}
+
+p{
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.75em;
+  text-align: left;
+  font-family: Arial Narrow, sans-serif;
+  color:black;
+  font-size: 16
+}
+
+@keyframes square {
+  /* Let's make the ball zig-zag! */
+  
+  0% {
+  transform: translate(0,0);
+  }
+  
+  25% {
+  transform: translate(0,87vh);
+  }
+
+  50% {
+  transform: translate(90vw,87vh);
+  }
+
+  75% {
+  transform: translate(90vw,0);
+  }
+
+  100% {
+  transform: translate(0,0);
+  }
+}
+
+.example-1 {
+  z-index: 100;
+  position: absolute;
+  animation-name: square;
+  animation-duration: 10s; 
+  animation-timing-function: ease-in-out; 
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running; 
+}
+
+.scroll-left {
+ height: 50px; 
+ width: 100%; 
+ bottom:0px;
+ overflow: hidden;
+ position: fixed;
+}
+
+.scroll-left p { /* text inside the box */
+ position: absolute;
+ width: 200%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align:center;
+ -moz-transform:translateX(100%); /* 0 */
+ -webkit-transform:translateX(100%);  
+ transform:translateX(100%);
+ -moz-animation: scroll-left 40s linear infinite; /* time */
+ -webkit-animation: scroll-left 40s linear infinite;
+ animation: scroll-left 40s linear infinite;
+ font-family: Helvetica, sans-serif;
+ font-size: 1em;
+ color: red;
+}
+
+@-moz-keyframes scroll-left { /* ANIMATION FOR ABOVE */
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); 
+ -webkit-transform: translateX(100%); 
+ transform: translateX(100%);     
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); 
+ -webkit-transform: translateX(-100%); 
+ transform: translateX(-100%); 
+ }
+}
+
+#scroll{
+  overflow:scroll;
+  width:300px;
+  height:400px;
+  padding: 20px;
+  background: /*#f1f1f1*/ none;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 30px; 
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: hotpink;
+  border-style: solid;
+  border-color: black;
+  border-width: 1pt;
+  -webkit-box-shadow: 0 0 0px rgba(255,255,255,.5);
+}
+
+::-webkit-scrollbar-button{
+  height: 13px;
+}
+
+.largerimage{
+ width:60vw;
+ height: 90vh;
+ margin-left:35vw;
+ visibility: visible;
+ position: absolute;
+ padding-top: 8.5px;
+ z-index:-0.5;
+ overflow: hidden;
+}
+
+.largerimage img{
+ width:auto;
+ height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+
+.largerimage{
+  visibility: hidden;
+}
+
+#scroll{
+  overflow:scroll;
+  width:70vw;
+  height:400px;
+  padding: 20px;
+  background: /*#f1f1f1*/ none; 
+}
+} 
+
+</style>
+</head>
+
+<body>
+	
+ <svg width="106%" height="106%" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="black" stroke-width="0.25"/>
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)"/>
+      <!--   <path d="M 100 0 L 0 0 0 100" fill="none" stroke="yellow" stroke-width="0.5"/> -->
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+ </svg>
+
+<svg height="100" width="100" class="example-1">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="0.25" fill="white" /> 
+</svg>
+
+<div class="container-1" id="scroll">
+
+	<div class="item-1">
+ 	 <div class="pic">
+ 	 <img class="images" src="images/theia/U16_FLYNN_THEIA-008-Small.jpg">
+ 	 </div>
+ 	</div>
+
+ 	<div class="item-1">
+ 	 <div class="pic">
+ 	 <img class="images" src="images/theia/backforth2.gif">
+ 	 </div>
+ 	</div>
+
+ 	<div class="item-1" class="blank"></div>
+
+ 	<div class="item-1">
+ 	 <div class="pic">
+ 	 <img class="images" src="images/theia/donau-posters-gif-2.gif">
+ 	 </div>
+ 	</div>
+
+ 	<div class="item-1">
+ 	 <div class="pic">
+ 	 <img class="images" src="images/theia/donau-posters-gif.gif">
+ 	 </div>
+ 	</div>
+
+ 	<div class="item-1">
+ 	 <div class="pic">
+ 	 <img class="images" src="images/theia/donau-web-gif.gif">
+ 	 </div>
+ 	</div>
+
+  <div class="item-1" class="blank"></div>
+
+ 	<div class="item-1">
+ 	 <div class="pic">
+ 	 <img class="images" src="images/theia/sun pours in.png">
+ 	 </div>
+ 	</div>
+
+  <div class="item-1" class="blank"></div>
+  <div class="item-1" class="blank"></div>
+ 	
+ 	<div class="item-1">
+ 	 <div class="pic">
+ 	 <img class="images" src="images/theia/U17_FLYNN_THEIA-003.jpg">
+ 	 </div>
+ 	</div>
+
+ 	<div class="item-1">
+ 	 <div class="pic">
+ 	 <img src="images/theia/U17_FLYNN_THEIA-005.jpg">
+ 	 </div>
+ 	</div>
+
+  <div class="item-1" class="blank"></div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/U17_FLYNN_THEIA-007.jpg">
+   </div>
+  </div>
+
+  <div class="item-1" class="blank"></div>
+
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/Installation 1.png">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/installation everyone.jpg">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/shortclip.gif">
+   </div>
+  </div>
+
+    <div class="item-1" class="blank"></div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/ecard-gif-2-2.gif">
+   </div>
+  </div>
+
+    <div class="item-1" class="blank"></div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/singing.jpg">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/singing2.jpg">
+   </div>
+  </div>
+
+    <div class="item-1" class="blank"></div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/stencil.png">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/ezgif.com-video-to-gif (1).gif">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/big-poster-paper.png">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/reading-book-black.jpg">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/run_out.gif">
+   </div>
+  </div>
+
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/yanky-hand.png">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img src="images/theia/type-specimen.png">
+   </div>
+  </div>
+
+  <div class="item-1" class="blank"></div>
+  <div class="item-1" class="blank"></div>
+
+
+
+<div class="largerimage">
+</div>
+
+</div>
+
+<div class="scroll-left"><p>
+  theia flynn is a senior in graphic design at risd. email her at: tflynn@risd.edu / theia.flynn@gmail.com 
+</p></div>
+
+
+
+</body>
+
+<script type="text/javascript">
+ 
+  $("img").click(function(){
+  $img = $(this).clone();
+  $(".largerimage").append().html($img.removeAttr('width'));
+  });
+
+
+</script>
+
+
+
+</html>
+
+
+ 

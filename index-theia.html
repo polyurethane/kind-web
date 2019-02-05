@@ -1,0 +1,643 @@
+<html> 
+
+<head>
+  <meta charset="utf-8">
+  <title>Final</title>
+  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <!--  <link href="images/theia/debug.css" rel="stylesheet" type="text/css"> -->
+
+<style type="text/css">
+
+html{
+box-sizing:border-box;
+overflow: hidden;
+background-image: linear-gradient(to top, #C0A96E , white);
+}
+
+
+svg{
+margin-left:-9px;
+margin-top:-16px;
+position: absolute;
+z-index:-1;
+}
+
+.container img:hover{
+  cursor: pointer;
+}
+
+@font-face {
+  font-family:'Neue';
+  src: url('images/theia/Neue Haas/NHaasGroteskTXPro-55Rg.ttf') format('truetype'),
+       url('images/theia/Neue Haas/neuehaas-regular.eot') format('embedded-opentype'),
+       url('images/theia/Neue Haas/NeueHaasGrotesk-Roman.otf') format('opentype'),
+       url('images/theia/Neue Haas/NeueHaasGrotesk-Roman.woff') format('woff');
+}
+
+@font-face {
+  font-family:'Neue-Ital';
+  src: url('images/theia/Neue Haas/NHaasGroteskTXPro-56It.ttf') format('truetype');
+}
+
+
+#title{
+  position: relative;
+  font-family: 'Neue', sans-serif;
+  font-size: 17pt ;
+/*margin-left:78%;
+  margin-top:-0.75em;*/
+  margin-left:0%;
+  width:340px;
+  color: black;
+  padding:1em;
+  display: inline-block;
+  font-family: 
+}
+
+#title p{
+margin-top:-3px;
+}
+
+.main{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  border-width:0.75pt; 
+  border-style:solid;
+  border-color:black;
+  width:100%;
+}
+
+.container {
+  overflow-y: scroll;
+  height: auto;
+  border-width:1pt; 
+  border-style: none none solid none;
+  border-color:black;
+}
+
+.item-1{
+  width:90%;
+  height:auto;
+  margin:0.5em;
+  overflow: hidden;
+  padding-bottom: 2em;
+}
+
+/*.pic{
+  display: block;
+  object-fit: contain;
+}*/
+
+.image{
+ width: 100%;
+ height: auto;
+ visibility: visible;
+}
+
+.gif{
+ width: 100%;
+ height: auto;
+ visibility: visible;
+}
+
+@keyframes square {
+  /* Let's make the ball zig-zag! */
+  
+  0% {
+  transform: translate(0,0);
+  }
+  
+  25% {
+  transform: translate(0,87vh);
+  }
+
+  50% {
+  transform: translate(90vw,87vh);
+  }
+
+  75% {
+  transform: translate(90vw,0);
+  }
+
+  100% {
+  transform: translate(0,0);
+  }
+}
+
+.example-1 {
+  z-index: 100;
+  position: absolute;
+  animation-name: square;
+  animation-duration: 10s; 
+  animation-timing-function: ease-in-out; 
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running; 
+}
+
+.scroll-left {
+ height: 50px; 
+ width:98.5vw; 
+ bottom:5px;
+ overflow: hidden;
+ position: fixed;
+}
+
+.scroll-left p { /* text inside the box */
+ position: absolute;
+ width: 200%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align:center;
+ -moz-transform:translateX(100%); /* 0 */
+ -webkit-transform:translateX(100%);  
+ transform:translateX(100%);
+ -moz-animation: scroll-left 40s linear infinite; /* time */
+ -webkit-animation: scroll-left 40s linear infinite;
+ animation: scroll-left 40s linear infinite;
+ font-family:'Neue-Ital', sans-serif;
+ font-size: 1.45em;
+ color: black;
+}
+
+@-moz-keyframes scroll-left { /* ANIMATION FOR ABOVE */
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); 
+ -webkit-transform: translateX(100%); 
+ transform: translateX(100%);     
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); 
+ -webkit-transform: translateX(-100%); 
+ transform: translateX(-100%); 
+ }
+}
+
+#scroll{
+  overflow:scroll;
+  width:380px;
+  height:420px;
+  padding: 20px;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 30px;
+  color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 1pt;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: violet;
+  border-style: solid;
+  border-color: black;
+  border-width: 1pt;
+}
+
+::-webkit-scrollbar-button{
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-track-piece{
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-corner{
+  visibility: hidden;
+}
+
+.largerimage{
+ width:100%;
+ height: 90vh;
+ visibility: visible;
+ position: relative;
+ padding-top: 8.5px;
+ z-index:-0.5;
+ overflow: hidden;
+ border-width:1pt; 
+ border-style: none none none solid;
+ border-color:black;
+ overflow: scroll;
+}
+
+
+.largerimage .image{
+ width:150%;
+ height: auto;
+ margin-top:-1.5%;
+}
+
+.largerimage .gif{
+ width:100%;
+ height: auto;
+ margin-top:-1.5%;
+}
+
+.largerimage ::-webkit-scrollbar-thumb{
+visibility: hidden;
+}
+
+a, a:active, a:visited{
+  text-decoration: none;
+  color:black;
+}
+
+a:hover{
+  color:violet;
+}
+
+
+
+/*.text{
+  visibility: hidden;
+}*/
+
+@media screen and (max-width: 1050px) {
+
+/*.name{
+visibility: visible;
+font-size:3em;
+padding-top: 0.55em;
+writing-mode: vertical-rl;
+text-orientation: upright;
+border-style: none solid none none;
+border-color:black;
+border-width: 1pt;
+height: 89.85%;
+}*/
+
+.largerimage, .largerimage img{
+  visibility: hidden;
+}
+
+#scroll{
+  overflow:scroll;
+  width:60vw;
+  height:70.2vh;
+  padding: 20px;
+  background: /*#f1f1f1*/ none;
+  border-style: none solid solid none;
+}
+
+#title{
+  position: absolute;
+  font-size: 16pt;
+  color: black;
+  width:59.70vw;
+  height:17.2vh;
+  border-width:1pt; 
+  border-style: none solid solid none;
+}
+
+#title p{
+margin-top:-3px;
+}
+
+.main{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  border-width:0.75pt; 
+  border-style:solid;
+  border-color:black;
+  width:100%;
+  height:98vh;
+}
+
+.scroll-left {
+  visibility: hidden;
+}
+
+
+@media screen and (max-width: 700px) {
+
+/*.name{
+ visibility: hidden;
+}*/
+
+html{
+background-image: linear-gradient(to top, white, #C0A96E , white, white);
+
+}
+
+.largerimage{
+  visibility: hidden;
+}
+
+.largerimage img {
+  visibility: hidden;
+}
+
+#title{
+  position: absolute;
+  font-size: 14pt;
+  color: black;
+  padding-left:1.35em;
+  width:85vw;
+  border-width:1pt; 
+  border-style: none;
+}
+
+#scroll{
+  overflow:scroll;
+  width:95vw;
+  height:70vh;
+  padding-left: 20px;
+  padding-top: 9px;
+  padding-right: 0px;
+  background: /*#f1f1f1*/ none;
+  border-style: none none solid none;
+  margin-left: -10px;
+}
+
+.main{
+border-style: none;
+}
+
+.example-1{
+  visibility: hidden;
+}
+
+.scroll-left {
+  visibility: hidden;
+}
+
+.scroll-left p { /* text inside the box */
+   visibility: hidden;
+}
+
+@-moz-keyframes scroll-left { /* ANIMATION FOR ABOVE */
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); 
+ -webkit-transform: translateX(100%); 
+ transform: translateX(100%);     
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); 
+ -webkit-transform: translateX(-100%); 
+ transform: translateX(-100%); 
+ }
+}
+
+}
+
+a, a:active, a:visited{
+text-decoration: none;
+color:black;
+cursor: pointer;
+}
+
+a:hover{
+color: violet;
+}
+
+</style>
+</head>
+
+<body>
+  
+<!--  <svg width="106%" height="106%" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#239ED5" stroke-width="0.25"/>
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)"/> -->
+      <!--   <path d="M 100 0 L 0 0 0 100" fill="none" stroke="yellow" stroke-width="0.5"/> -->
+<!--       </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+ </svg> -->
+
+<!-- <svg height="100" width="100" class="example-1">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="1pt" fill="white" />  -->
+<div class="main">
+
+<!-- <div class="name">T H E I A  F L Y N N </div> -->
+
+<div class="wrap">
+<div class="container" id="scroll">
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Print made for a Yanky Swap • Print. Risograph, Winter 2019" src="images/theia/yanky-hand.png">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="A collaborative book made with my friend Aedan, documenting our exchanges • Print. Risograph, UV printer, Spring 2018" src="images/theia/U16_FLYNN_THEIA-008-Small.jpg">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="A collaborative book made with my friend Aedan, documenting our exchanges • Print. Risograph, UV printer, Spring 2018" src="images/theia/backforth2.gif">
+   </div>
+  </div>
+
+  <div class="item-1">
+    <div class="pic">
+    <video class="gif" content="Video of a browser-based pop-up adventure • Web, 2018" controls loop>
+      <source src="images/theia/CTC-Final_Window_high-res.mp4" type="video/mp4">
+      Sorry... Your browser does not support the video tag.
+    </video>
+  </div>
+  </div>
+
+<!--   <div class="item-1">
+   <div class="pic">
+   <img content="Website prototype for the identity of the Donau Festival. Print. Plotter, 2017" src="images/theia/donau-posters-gif-2.gif">
+   </div>
+  </div> -->
+
+   <div class="item-1">
+   <div class="pic">
+   <img class="gif" content="Posters for the fake identity of the Donau Festival • Print. Inkjet plotter, 2017" src="images/theia/donau-posters-gif.gif">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="gif" content="Website for the fake identity of the Donau Festival • Web. 2017" src="images/theia/donau-web-gif-small.gif">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Self-inititated • Print. Inkjet plotter, 2017" src="images/theia/sun pours in-paper.png">
+   </div>
+  </div>
+  
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Envelopes for a package to be delivered, on the theme of innocence, youth and Switzerland. Bags • Print. UV printer, 2018" src="images/theia/U17_FLYNN_THEIA-003.jpg">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Content of the first envelope • Print. Laserjet, 2018" src="images/theia/U17_FLYNN_THEIA-005.jpg">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Content of the third envelope • Print. Laserjet, 2018" src="images/theia/U17_FLYNN_THEIA-007.jpg">
+   </div>
+  </div>
+
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Interactive installation using a velcro system  • Installation, 2017" src="images/theia/Installation 1.png">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Interactive installation using a velcro system • Installation, 2017" src="images/theia/installation everyone.jpg">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="gif" content="Interactive installation using a velcro system • Installation, 2017" src="images/theia/shortclip.gif">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="X Page for the Brown Universisty publication the College Hill Independant, a collaboration with Maria Gerdyman • Installation, 2017" src="images/theia/attleboro-part1.png">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="An anthology of the e-card, retracing its evolution from 1995 to 20 years later • Print. Laserjet, 2017" src="images/theia/ecard-gif-2-2.gif">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Poster for a poem written in in the spring • Print. Laserjet, 2017" src="images/theia/singing.jpg">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Poster for a poem written in the Spring • Print. Laserjet, 2017" src="images/theia/singing2.jpg">
+   </div>
+  </div>
+
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Stencil for a modular cursive typeface. Plexiglass, 2017" src="images/theia/stencil.png">
+   </div>
+  </div>
+
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Poster for an essay about sound, human scale and architecture written in the Fall • Print. Inkjet plotter, 2018" src="images/theia/big-poster-paper.png">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="A book on the action of reading and a companion in reading gymnastics • Print. Laserjet, 2018" src="images/theia/reading-book-black.jpg">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Package to bury and be found much later, exploring personal and nonpersonal entropy • Print. Risograph, UV printer, 2018" src="images/theia/run_out.gif">
+   </div>
+  </div>
+
+  <div class="item-1">
+   <div class="pic">
+   <img class="image" content="Specimen poster for the serif typeface Incline, made in the Fall • Print. Risograph, 2018 " src="images/theia/type-specimen.png">
+   </div>
+  </div>
+
+</div>
+
+<div id="title" class="original"><p>
+<span>Theia Flynn is a senior in graphic design at the Rhode Island School of Design. She likes to work with print and the web. <br> <br>Contact her at <a href="mailto:tflynn@risd.edu?subject=Hello">
+tflynn@risd.edu</a></span>
+</p></div>
+</div>
+
+
+<div class="largerimage">
+</div>
+<!-- <div class="text"><p>
+  ◯ theia flynn is a senior in graphic design at risd. email her at: tflynn@risd.edu / theia.flynn@gmail.com 
+</p></div> -->
+</div>
+
+
+<div class="scroll-left"><p>
+  email: tflynn@risd.edu   /   ig: ylfaieth   /   github: theiaflynn
+</p></div>
+
+</body>
+
+<script type="text/javascript">
+ 
+  $("img").click(function(){
+    $img = $(this).clone();
+    $(".largerimage").append().html($img.removeAttr('width'));
+    $("#title").append().html($img.attr("content"));
+
+  });
+
+
+$(document).ready(function(){
+console.log($("body").length)
+$("html").css('cursor','url(images/theia/ball.svg),auto');
+});
+
+</script>
+
+
+
+</html>
+
+
+ 

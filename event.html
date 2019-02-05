@@ -1,0 +1,103 @@
+<html> 
+
+<head>
+  <meta charset="utf-8">
+  <title>Food Craft</title>
+  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<style type="text/css">
+
+html{
+background-color: /*#f1f3f4*/ ;
+font-family: Helvetica, sans-serif;
+box-sizing:border-box;
+overflow: hidden;
+}
+
+svg{
+margin-left:-9px;
+margin-top:-16px;
+position: absolute;
+z-index:-1;
+}
+
+.main{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  border-width:0.75pt; 
+  border-style:solid;
+  border-color:black;
+  width:100%;
+}
+
+.container{
+  overflow-y: scroll;
+  height: auto;
+  border-width:1pt; 
+  border-style:solid;
+  border-color:black;
+}
+
+.item{
+  width:90%;
+  height:auto;
+  margin:0.5em;
+  overflow: hidden;
+}
+
+
+</style>
+
+</head>
+
+<body>
+  
+ <svg width="106%" height="106%" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+      <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#239ED5" stroke-width="0.25"/>
+      </pattern>
+      <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+        <rect width="100" height="100" fill="url(#smallGrid)"/>
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="yellow" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+ </svg>
+
+<svg height="100" width="100" class="example-1">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="1pt" fill="white" /> 
+</svg>
+
+<div class="main">
+<div class="container">
+
+   <div class="item">
+
+   <div class="pic">
+  
+   </div>
+  </div>
+
+</div>
+</div>
+
+
+<div class="intro"><p>
+</p></div>
+
+<div class="date"><p>
+</p></div>
+
+<div class="more- info"><p>
+</p></div>
+
+
+</body>
+
+</html>
+
+
+ 
