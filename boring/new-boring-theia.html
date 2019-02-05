@@ -1,0 +1,278 @@
+<html> 
+
+<head>
+  <meta charset="utf-8">
+  <title>Boring Flex</title>
+  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0">
+  <link rel="stylesheet" type="text/css" href="styles/new-boring-theia.css">
+
+
+<style>
+
+                                        /* Initialize with major global classes: */
+*,*:before,*:after{
+  box-sizing:inherit;
+}
+
+
+html{
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  overflow-x:hidden;
+}
+
+body{
+  margin:0;
+}
+
+html,body{
+  font-family:Verdana,sans-serif;
+  font-size:15px;
+  line-height:1.5;
+}
+
+img{vertical-align:middle;}
+
+a{
+  color:blue;
+  background-color:transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,a:hover{
+  outline-width:0;
+  color: black;
+  }
+
+h1{
+  font-size:39px;
+  font-family:Arial,sans-serif;
+  line-height: 19px;
+  color:blue;
+  text-decoration:underline;
+}
+
+
+h2{
+  font-size:39px;
+  font-family:Arial,sans-serif;
+  line-height: 19px;
+  color:black;
+  text-decoration:underline;
+}
+
+h1:hover{
+  color:black;
+  text-decoration:none;
+}
+
+.drop-click{
+  overflow:visible;
+}
+
+.drop-click{
+  border:none;
+  display:inline-block;
+  padding:8px 16px;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:right;
+  cursor:pointer;
+  white-space:nowrap;
+  /* user select */
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+
+/*.dropdown-click,.dropdown-hover{
+  position:relative;
+  display:inline-block;
+  cursor:pointer;
+}*/
+
+.dropdown-content{
+  cursor:auto;
+  color:blue;
+  background-color:none;
+  display:none;
+  position:relative;
+  text-align:right;
+  min-width:160px;
+  margin:0;
+  padding:0;
+  z-index:1;
+}
+
+.bar-block .dropdown-hover,.bar-block .dropdown-click{
+  width:100%;
+}
+
+.bar-block .dropdown-hover .dropdown-content,.bar-block .dropdown-click .dropdown-content{
+  min-width:100%;
+}
+
+.bar-block .dropdown-hover .drop-click,.bar-block .dropdown-click .drop-click{
+  width:100%;
+  text-align:left;
+  padding:8px 16px;
+}
+
+.bar .bar-item{
+  padding:8px 16px;
+  float:left;
+  width:auto;
+  border:none;
+  display:block;
+  outline:0
+}
+
+.bar .dropdown-hover,.bar .dropdown-click{
+  position:static;float:left
+}
+
+.bar .drop-click{
+  white-space:normal
+}
+
+.bar-block .bar-item{
+  width:100%;
+  display:block;
+  padding:8px 16px;
+  text-align:left;
+  border:none;
+  white-space:normal;
+  float:none;
+  outline:0;
+}
+
+.bar-item{
+  text-align:center
+}
+.block{
+  display:block;width:100%
+}
+
+.container:after,.container:before,.hide{display:none!important}
+
+.show-block,.show{display:block!important}
+
+.show-inline-block{display:inline-block!important}
+
+.container{
+  padding:0.01em 16px
+}
+
+.border{
+  /*border:1px solid blue!important*/
+  border: none;
+}
+
+.drop:hover{
+  color:blue!important;background-color:white!important
+}
+
+.blue{
+  color:blue!important;background-color:white!important
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container-1"> <!-- START OF CONTAINER 1 -->
+  
+  <div class="item-1">
+  <div id="content">
+    <div class="container">
+    <div class="dropdown-click">
+        <h1>Home</h1>
+        <div class="drop" onclick="myFunction()" class="drop-click blue">
+          <h1>Program</h1>
+        </div>
+        <div id="Demo" class="dropdown-content bar-block border">
+          <a href="#" class="bar-item drop-click"><h1>Exhibitions</h1></a>
+          <a href="#" class="bar-item drop-click"><h1>Events</h1></a>
+          <a href="#" class="bar-item drop-click"><h1>Projects</h1></a>
+          <a href="#" class="bar-item drop-click"><h1>Education</h1></a>
+          <a href="#" class="bar-item drop-click"><h1>Archive</h1></a>
+        </div>
+        <h1>About</h1>
+        <h1>Visit</h1>
+        <h1>KW Friends</h1>
+        <h1>Contact</h1>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="item-1">2</div>
+  <div class="item-1">3</div>
+
+</div> <!-- END OF CONTAINER 1 -->
+
+
+<div class="container-2"> <!-- START OF CONTAINER 2 -->
+  <div class="item-2">
+    <div id="content">
+
+      <footer class="footer" role="contentinfo" itemscope="" itemtype="http://schema.org/WPFooter">
+      <div id="inner-footer" class="wrap  kite kite--bottom cf">
+        
+        <div class="footer_column kite__item">
+          <p>KW Institute for Contemporary Art <br>
+          KUNST-WERKE BERLIN e. V. <br>
+          Auguststraße 69 <br>
+          10117 Berlin <br>
+          Tel. +49 30 243459-0 <br>
+            <a href="mailto:info@kw-berlin.de">info@kw-berlin.de</a>
+          </p>
+        </div>
+    
+        <div class="footer_column footer-links-wrapper kite__item">
+        <nav role="navigation">
+          <div class="footer-links cf">
+            <ul id="menu-footer_menu-english" class="nav footer-nav cf">
+              <li id="menu-item-9735" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9735"><a href="/en/contact/#newsletter">Newsletter</a></li>
+              <li id="menu-item-791" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-791"><a href="/en/contact/#social-media">Social Media</a></li>
+              <li id="menu-item-792" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-792"><a href="/press">Press</a></li>
+              <li id="menu-item-793" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-793"><a href="/en/contact/#colophon">Colophon</a></li>
+              <li id="menu-item-12810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12810"><a href="https://www.kw-berlin.de/en/dataprivacy/">Data Protection</a></li>
+            </ul></div>   
+        </nav>
+        </div>
+
+      </div>
+      </footer>
+
+            <header>
+          <div class="nav newsletter">
+            <div class="responsive-menu-pro-item menu-item menu-item-search">
+              <form method="get" class="menu-search-form" action="https://www.kw-berlin.de/en/">
+                <input class="text_input" type="text" value="Search" name="s" onfocus="this.value = '';" onblur="this.value = 'Search';">
+                <input type="submit" class="my-wp-search hidden" value="Search">
+              </form>
+            </div>
+          </div>
+      </nav>
+      </header>
+    
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>
+
+
+

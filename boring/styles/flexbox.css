@@ -1,0 +1,23 @@
+.container {
+  background-color: red;
+  display: flex; /* or inline-flex */
+  flex-direction: row; /* or row-reverse | column | column-reverse */
+  flex-wrap: nowrap; /* or wrap | wrap-reverse */
+/* or flex-flow: row nowrap;*/
+  justify-content: flex-start; /* or flex-end | center | space-between | space-around | space-evenly */
+}
+
+/* 
+
+FLEX-DIRECTION
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top 
+
+FLEX-WRAP
+nowrap (default): all flex items will be on one line
+wrap: flex items will wrap onto multiple lines, from top to bottom.
+wrap-reverse: flex items will wrap onto multiple lines from bottom to top.
+
+*/
