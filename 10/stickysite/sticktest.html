@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>sticky</title>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+  <script>
+    $(function() {
+    $( "#draggable" ).draggable();
+  });
+
+// for (var i=0; i<4; i++){
+//    document.write(" minty mintier mintiest");
+//   document.createElement("img").src="images/monkey4.png";
+//  }
+
+</script>
+
+<style>
+
+
+#imgback {
+      position:absolute;
+    margin: -3%;
+    width: 105vw;
+    height: 105vh;
+    z-index: -1;
+}
+#img {
+    position:absolute;
+    margin: -3%;
+    width: 105vw;
+    height: 105vh;
+    z-index:1;
+}
+
+#draggable {
+  background: none;
+  cursor: help;
+
+}
+
+#imagescroll{
+  overflow:auto;
+  width:300px;
+  height:180px;
+  padding:10px;
+  }
+::-webkit-scrollbar {
+  -webkit-appearance:none;
+width:7px;
+}
+</style>
+
+</head>
+
+<body>
+
+<img id="imgback" src="images/flatstickback.png">
+
+   <div id="draggable">
+<img id="img" src="images/flatstick.png">
+
+</div>
+
+
+</body>
+
+</html>
