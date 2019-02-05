@@ -1,0 +1,100 @@
+.nav {
+	font-size: 14px;
+	line-height: 3.14286;
+	letter-spacing: -.01em;
+	color: #fff;
+	font-weight: 100;
+	width: auto;
+	height: 44px;
+	background: rgba(45,45,45,0.98);
+}
+
+.nav div {
+	display: flex;
+	justify-content: space-between;
+/*	max-width: 980px;*/
+	padding: 0 22px;
+}
+
+.small-caps {
+	font-variant-caps: all-small-caps;
+}
+
+.main{
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	padding-top: 3.0em;
+	padding-bottom: 3.1em;
+}
+.headline {
+	margin: auto;
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: .004em;
+    margin-bottom: .2em;
+}
+
+.subhead {
+	font-size: 21px;
+    line-height: 1.38105;
+    font-weight: 400;
+    letter-spacing: .011em;
+}
+
+.violator {
+	font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    color: #bbb;
+    background: transparent;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    white-space: nowrap;
+}
+
+.links{
+	margin-top: .65em;
+	font-size: 21px;
+    line-height: 1.38105;
+    font-weight: 400;
+    letter-spacing: .011em;
+	color: #6bf;
+}
+
+.links a:hover{
+    text-decoration: underline;
+}
+
+.links span::after{
+    padding-left: 500px;
+}
+
+.hero {
+    border-color: #222;
+    border-bottom-color: #222;
+    box-sizing: border-box;
+    border-top-width: 12px;
+    border-bottom-width: 12px;
+    border-style: solid;
+    height: calc(580px+12px);
+    border-right-width: 0 !important;
+    border-left-width: 0 !important;
+}
+
+.iphone-logo{
+    margin-bottom: 14px;
+}
+
+.image-wrapper img{
+    width: 986px;
+    margin-block-start: 1em;
+    margin-inline-start: 40px;
+}
